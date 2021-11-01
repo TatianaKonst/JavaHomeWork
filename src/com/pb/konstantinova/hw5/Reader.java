@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class Reader {
     private static int Readers = 0;
     private String fullName;
-    private int ticketLibrary;
+    private String ticketLibrary;
     private String faculty;
-    private int phone;
-    private int dateBirth;
+    private String phone;
+    private String dateBirth;
 
     public void takeBook(int count){
         System.out.println(this.fullName + " взял(a) " + count + " книги");
@@ -47,18 +47,18 @@ public class Reader {
     }
 
 
-    public Reader(String fullName, int dateBirth,int phone,String faculty){
+    public Reader(String fullName, String dateBirth,String phone,String faculty){
         this(fullName, dateBirth, phone);
         this.faculty= faculty;
 
     }
 
-    public Reader(String fullName, int dateBirth,int phone){
+    public Reader(String fullName, String dateBirth,String phone){
         this(fullName, dateBirth);
         this.phone= phone;
 
     }
-    public Reader(String fullName, int dateBirth) {
+    public Reader(String fullName, String dateBirth) {
         this.fullName = fullName;
         this.dateBirth = dateBirth;
         this.faculty = "external";
@@ -67,7 +67,7 @@ public class Reader {
     }
 
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
@@ -75,7 +75,7 @@ public class Reader {
         this.phone = phone;
     }
 
-    public int getDateBirth() {
+    public String getDateBirth() {
         return dateBirth;
     }
 
@@ -99,7 +99,7 @@ public class Reader {
         this.faculty = faculty;
     }
 
-    public int getTicketLibrary() {
+    public String getTicketLibrary() {
         return ticketLibrary;
     }
 }
