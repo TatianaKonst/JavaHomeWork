@@ -2,15 +2,16 @@ package com.pb.konstantinova.hw5;
 
 public class Library {
     public static void main(String[] args) {
-        Book[] books = {new Book("Приключения", "Иванов И. И.", 2000)
-                , new Book("Словарь", "Сидоров А. В", 1980)
-                , new Book("Энциклопедия", "Гусев К. В.", 2010)};
+        Book[] books = {new Book("Самый богатый человек в Вавилоне", "Джорж Сэмюэль Клейсон", 2021)
+                , new Book("Хочу и буду. Принять себя, полюбить жизнь и стать счастливым", "Лабковский Михаил", 2020)
+                , new Book("Мертвые души", "Гоголь Николай", 1842)};
 
-        Reader[] readers = {new Reader("Серчук И.И", "2000-01-25")
-                , new Reader("Савин И.И", "2000-01-25", "+380977503107")
-                , new Reader("Кобчек И.И", "2000-01-25", "+380674650105", "МЭО")};
-        readers[1].setFaculty("Автоматизация");
-        readers[0].setPhone("+0234211231");
+        Reader[] readers = {new Reader("Куделя А.И.", "1987-05-15")
+                , new Reader("Плыска И.И.", "1995-07-18", "0503251644", "Менеджмент")
+                , new Reader("Константинова Т.Г.", "1988-02-23", "0637216671")};
+
+        readers[1].setFaculty("Психология");
+        readers[0].setPhone("0953456612");
         print(books);
         print(readers);
 
@@ -32,14 +33,14 @@ public class Library {
     }
 
     private static void print(Book... books){
-        System.out.println("Информация о книгах:");
+        System.out.println("Список книг:");
         for (Book book:books) System.out.println(book.getName() + "(" + book.getAuthor() + " " + book.getAuthor() + book.getYear() + " г.)");
     }
     private static void print(Reader... readers){
-        System.out.println("Данные о пользователям:");
-        for (Reader reader:readers) System.out.println("Читательский билет номер: "+ reader.getTicketLibrary()
+        System.out.println("Информация о пользователях:");
+        for (Reader reader:readers) System.out.println("Читательский билет: "+ reader.getTicketLibrary()
                 + ", ФИО: " + reader.getFullName()
-                + ", контактный номер: " + reader.getPhone()
+                + ", номер телефона: " + reader.getPhone()
                 + ", дата рождения: " + reader.getDateBirth()
                 + ", факультет: " + reader.getFaculty());
     }

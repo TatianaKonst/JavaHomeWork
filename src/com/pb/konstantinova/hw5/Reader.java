@@ -28,16 +28,16 @@ public class Reader {
         System.out.println();
     }
 
-    public void returnBook(Integer count){
-        System.out.println(this.fullName + " вернул " + count + " книги");
+    public void returnBook(int count){
+        System.out.println(this.fullName + " вернул(а) " + count + " книги");
     }
     public void returnBook(String... books){
-        System.out.println(this.fullName + " вернул книги: " + Arrays.toString(books));
+        System.out.println(this.fullName + " вернул(а) книги: " + Arrays.toString(books));
     }
 
     public void returnBook(Book... books){
         int i=0;
-        System.out.print(this.fullName + " вернул книги: ");
+        System.out.print(this.fullName + " вернул(а) книги: ");
         for(Book book:books){
             i++;
             System.out.print(book.getName() + " (" + book.getAuthor()+" " + book.getYear() + ".г)");
@@ -47,18 +47,18 @@ public class Reader {
     }
 
 
-    public Reader(String fullName, String dateBirth,String phone,String faculty){
+    public Reader(String fullName, int dateBirth,int phone,String faculty){
         this(fullName, dateBirth, phone);
         this.faculty= faculty;
 
     }
 
-    public Reader(String fullName, String dateBirth,String phone){
+    public Reader(String fullName, int dateBirth,int phone){
         this(fullName, dateBirth);
         this.phone= phone;
 
     }
-    public Reader(String fullName, String dateBirth) {
+    public Reader(String fullName, int dateBirth) {
         this.fullName = fullName;
         this.dateBirth = dateBirth;
         this.faculty = "external";
@@ -67,7 +67,7 @@ public class Reader {
     }
 
 
-    public String getPhone() {
+    public int getPhone() {
         return phone;
     }
 
@@ -75,7 +75,7 @@ public class Reader {
         this.phone = phone;
     }
 
-    public String getDateBirth() {
+    public int getDateBirth() {
         return dateBirth;
     }
 
@@ -99,7 +99,7 @@ public class Reader {
         this.faculty = faculty;
     }
 
-    public Integer getTicketLibrary() {
+    public int getTicketLibrary() {
         return ticketLibrary;
     }
 }

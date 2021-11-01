@@ -56,3 +56,4 @@ public class Anagram {
         }
         return array;
     }
+}
