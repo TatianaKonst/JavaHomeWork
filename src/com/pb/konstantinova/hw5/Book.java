@@ -3,7 +3,7 @@ package com.pb.konstantinova.hw5;
 public class Book {
     private String name;
     private String author;
-    private int year;
+    private Integer year;
 
     public Book(String name, String author, Integer year) {
         this.name = name;
@@ -19,11 +19,11 @@ public class Book {
         this.author = author;
     }
 
-    public int getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 

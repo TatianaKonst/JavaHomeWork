@@ -6,12 +6,12 @@ public class Library {
                 , new Book("Хочу и буду. Принять себя, полюбить жизнь и стать счастливым", "Лабковский Михаил", 2020)
                 , new Book("Мертвые души", "Гоголь Николай", 1842)};
 
-        Reader[] readers = {new Reader("Куделя А.И.", "1987-05-15")
+        Reader[] readers = {new Reader("Куделя А.И.", "1987-05-15","0684445533")
                 , new Reader("Плыска И.И.", "1995-07-18", "0503251644", "Менеджмент")
                 , new Reader("Константинова Т.Г.", "1988-02-23","0637216671")};
 
         readers[1].setFaculty("Психология");
-        readers[0].setPhone("0953456612");
+        readers[0].setPhone("0954561233");
         print(books);
         print(readers);
 
@@ -33,14 +33,14 @@ public class Library {
     }
 
     private static void print(Book... books){
-        System.out.println("Список книг:");
-        for (Book book:books) System.out.println(book.getName() + "(" + book.getAuthor() + " " + book.getAuthor() + book.getYear() + " г.)");
+        System.out.println("Перечень книг:");
+        for (Book book:books) System.out.println(book.getName() + "(" + book.getAuthor() + " " + book.getYear() + " г.)");
     }
     private static void print(Reader... readers){
-        System.out.println("Информация о пользователях:");
+        System.out.println("Информация о пользователе:");
         for (Reader reader:readers) System.out.println("Читательский билет: "+ reader.getTicketLibrary()
                 + ", ФИО: " + reader.getFullName()
-                + ", номер телефона: " + reader.getPhone()
+                + ", контактный номер: " + reader.getPhone()
                 + ", дата рождения: " + reader.getDateBirth()
                 + ", факультет: " + reader.getFaculty());
     }

@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 public class Reader {
     private static int Readers = 0;
+    private int ticketLibrary;
     private String fullName;
-    private String ticketLibrary;
     private String faculty;
     private String phone;
     private String dateBirth;
 
     public void takeBook(int count){
-        System.out.println(this.fullName + " взял(a) " + count + " книги");
+        System.out.println(this.fullName + " взял(а) " + count + " книги");
     }
     public void takeBook(String... books){
         System.out.println(this.fullName + " взял(а) книги: " + Arrays.toString(books));
@@ -28,7 +28,7 @@ public class Reader {
         System.out.println();
     }
 
-    public void returnBook(int count){
+    public void returnBook(Integer count){
         System.out.println(this.fullName + " вернул(а) " + count + " книги");
     }
     public void returnBook(String... books){
@@ -99,7 +99,7 @@ public class Reader {
         this.faculty = faculty;
     }
 
-    public String getTicketLibrary() {
+    public int getTicketLibrary() {
         return ticketLibrary;
     }
 }
